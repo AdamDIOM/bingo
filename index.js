@@ -1,4 +1,5 @@
 async function newCard(){
+    clearCookies();
     var phrases = [];
     var text;
     /*fetch('phrases.txt')
