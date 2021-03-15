@@ -60,7 +60,8 @@ function checkCookies() {
   
     if (navigator.cookieEnabled == true) {
       console.log("Cookies are enabled.");
-      
+      console.log(document.cookie);
+      console.log("hi");
       cookieArray = document.cookie.split(';');
 
       if(cookieArray.length < 16) {
@@ -68,7 +69,7 @@ function checkCookies() {
       }  
       
 
-      if(cookieArray[0] = "0") {
+      if(cookieArray[0] == "0") {
         cookieArray.shift()
       } 
 
