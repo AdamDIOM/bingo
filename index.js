@@ -1,3 +1,5 @@
+const { element } = require("prop-types");
+
 async function newCard(){
     clearCookies();
     var phrases = [];
@@ -97,3 +99,17 @@ function checkCookies() {
        newCard();
     }
   }
+
+function flipFill(id){
+    console.log("click");
+    theElement = document.getElementById(id);
+
+    if(theElement.style.background == "pink"){
+        theElement.style.background = "antiquewhite";
+    }
+    else{
+        theElement.style.background = "pink";
+    }
+
+
+}
