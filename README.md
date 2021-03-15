@@ -1,6 +1,6 @@
-##Briefing Bingo
+## Briefing Bingo
 
-###How to contribute key phrases
+### How to contribute key phrases
 1. Click 'Fork' (top right of page)
 2. Open 'phrases.txt'
 3. Click 'Edit this file' (pencil icon on the right)
