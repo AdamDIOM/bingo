@@ -8,7 +8,7 @@ body{
 }
 header{
     background-color: lightslategray;
-    font-size: 2.9vh;
+    font-size: 2.7vh;
     height: 9vh;
     width:98%;
     padding:0.5vh 1% 0.5vh 1%;
@@ -19,6 +19,15 @@ header{
 #left{
     display:block;
     float: left;
+}
+#center{
+    display:block;
+    float:none;
+    text-align:center;
+}
+#right{
+    display:block;
+    float:right;
 }
 #main{
     height:80vh;
@@ -111,4 +120,21 @@ footer{
 #image{
     max-width:75vw;
     max-height:75vh;
+}
+
+table{
+    display:table;
+    width:75vw;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse:collapse;
+}
+tr{
+    height:15vh;
+}
+td{
+    border:5px solid lime;
+    margin:0px;
+    width:25%;
+    text-align:center;
 }

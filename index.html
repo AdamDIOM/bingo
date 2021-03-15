@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CorgiHacks!</title>
+    <title>Briefing Bingo!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel='icon' href='./Assets/Avatar.ico' type='image/x-icon'/ >
     <script type="text/javascript" src="index.js"></script>
 </head>
-<body>
+<body onload="checkCookies()">
     <header>
         <div id="left">
-            <p>Love Corgis Online!</p>
+            <p>IOMG Coronavirus Media Briefing Bingo</p>
         </div>
     </header>
 
     <div id="main">
         <div id="nav">
             <ul id="list">
-                <li>Love Corgis</li>
+                <li>Bingo</li>
             </ul>
         </div>
         <div id="section">
-            <h1 id="sectionHeading">Random Corgi Photo</h1>
-            <button onclick="newDog()">New image</button>
+            <h1 id="sectionHeading">Bingo</h1>
+            <button onclick="newCard()">New card</button>
             <div id="content">
-                <img src="#" id="image">
+                <table>
+                    <tr>
+                        <td id="0"></td>
+                        <td id="1"></td>
+                        <td id="2"></td>
+                        <td id="3"></td>
+                    </tr>
+                    <tr>
+                        <td id="4"></td>
+                        <td id="5"></td>
+                        <td id="6"></td>
+                        <td id="7"></td>
+                    </tr>
+                    <tr>
+                        <td id="8"></td>
+                        <td id="9"></td>
+                        <td id="10"></td>
+                        <td id="11"></td>
+                    </tr>
+                    <tr>
+                        <td id="12"></td>
+                        <td id="13"></td>
+                        <td id="14"></td>
+                        <td id="15"></td>
+                    </tr>
+                </table>
             </div>
                                                                     
             
@@ -34,8 +59,13 @@
         <div id="left">
             &copy Adam 2021
         </div>
+        
         <div id="right">
-            <a href="https://github.com/AdamDrummondIOM/CorgiHacks" id="link">Contribute</a>
+            <a href="https://github.com/AdamDrummondIOM/bingo" id="link">Contribute</a>
+        </div>
+
+        <div id="center">
+                This site uses cookies. Not afilliated with IOMG.
         </div>
     </footer>
 </body>
