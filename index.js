@@ -36,7 +36,7 @@ async function newCard(){
         cell.innerHTML = randomPhrases[i];
     }
 
-    console.log("new card requested");
+    //console.log("new card requested");
 };
 
 
