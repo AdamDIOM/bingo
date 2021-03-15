@@ -31,24 +31,66 @@ async function newCard(){
         console.log(randomPhrases[phrase]);
     }
 
-    for(i = 0; i < 16; i++){
-        cell = document.getElementById(i);
-        cell.innerHTML = randomPhrases[i];
-    }
+    console.log(randomPhrases);
 
+    fillCard(randomPhrases);
+    
+    //document.cookie = `7=potato`
+    console.log(document.cookie);
     //console.log("new card requested");
 };
 
+function fillCard(randomPhrases){
+    for(i = 0; i < 16; i++){
+        cell = document.getElementById(i);
+        cell.innerHTML = randomPhrases[i];
+        document.cookie = `${i}=${randomPhrases[i]};`
+    }
+}
+
+function clearCookies(){
+    for(i = 0; i < 16; i++){
+        document.cookie = `${i}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+    }
+    console.log(document.cookie);
+}
 
 function checkCookies() {
     var text = "";
   
     if (navigator.cookieEnabled == true) {
-      text = "Cookies are enabled.";
-      newCard();
+      console.log("Cookies are enabled.");
+      
+      cookieArray = document.cookie.split(';');
+
+      if(cookieArray.length < 16) {
+        newCard()
+      }  
+      
+
+      if(cookieArray[0] = "0") {
+        cookieArray.shift()
+      } 
+
+      randomPhrases = [];
+
+      for(s in cookieArray){
+        console.log(cookieArray[s]);
+        console.log(cookieArray[s].split('=')[0]);
+        console.log(cookieArray[s].split('=')[1]);
+        for(i = 0; i < 16; i++){
+            if(cookieArray[s].split('=')[0] == i){
+                randomPhrases.push(cookieArray[s].split('=')[1])
+            }
+        }
+        //randomPhrases[cookieArray[s].split('=')[0]] = cookieArray[s].split('=')[1];
+      }
+    console.log(randomPhrases);
+
+      fillCard(randomPhrases)
+      
     } else {
-       text = "Cookies are not enabled.";
+       console.log("Cookies are not enabled.");
        newCard();
     }
-    console.log(text);
   }
