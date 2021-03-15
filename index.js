@@ -2,6 +2,7 @@ const { element } = require("prop-types");
 
 async function newCard(){
     clearCookies();
+    clearFill();
     var phrases = [];
     var text;
     /*fetch('phrases.txt')
@@ -112,4 +113,10 @@ function flipFill(id){
     }
 
 
+}
+
+function clearFill(){
+    for(i = 0; i < 16; i++){
+        document.getElementById(i).style.background = "antiquewhite";
+    }
 }
